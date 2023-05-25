@@ -1,104 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>JS E-Commerce</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- NavBar -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">JS E-Commerce</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JS E-Commerce</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
     </nav>
 
-    <div class="lista-vacia">
-                
-    </div>
+    <div id="lista-vacia"></div>
 
     <!-- Cards -->
 
-    
     <div class="container">
-        <h2>Catálogo de Productos</h2>
+      <h2>Catálogo de Productos</h2>
     </div>
-    
+
     <div class="container-cards">
-        
-        <div class="card border-dark mb-3" style="max-width: 20rem;">
-            <div class="card-header">Producto A</div>
-            <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsam rerum eveniet
-                    adipisci atque explicabo obcaecati nulla incidunt enim veniam..</p>
-                    <button type="button" class="btn btn-dark">Agregar al carrito</button>
-                </div>
-            </div>
-        <div class="card border-dark mb-3" style="max-width: 20rem;">
-            <div class="card-header">Producto B</div>
-            <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsam rerum eveniet
-                    adipisci atque explicabo obcaecati nulla incidunt enim veniam..</p>
-                    <button type="button" class="btn btn-dark">Agregar al carrito</button>
-                </div>
-            </div>
-            <div class="card border-dark mb-3" style="max-width: 20rem;">
-                <div class="card-header">Producto C</div>
-                <div class="card-body">
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsam rerum eveniet
-                        adipisci atque explicabo obcaecati nulla incidunt enim veniam..</p>
-                        <button type="button" class="btn btn-dark">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            
-            
-            <!-- Cart -->
-            
-            <div class="container">
-                <h2>Tu Carrito</h2>
-                <em>Tus productos seleccionados...</em>.
-            
-                <div class="container-cart">
-                    
-                    <h4 class="card-title">Producto C</h4>
-                    <p class="card-text">Precio: </p>
-                    <button type="button" class="btn btn-outline-primary">Eliminar</button>
-                </div>
-            </div>
-            
-            <hr>
-            
-            <!-- Form -->
-            
-            <form class="container">
-                <h3>Formulario de Contacto</h3>
-                <label>Nombre y Apellido</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Ingrese su Nombre y Apellido">
-                <label>Correo Electrónico</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su E-mail">
-                <div class="container-form">
-                    
-                    <button type="submit" class="btn btn-secondary">Comprar y Enviar Información</button>
-                </div>
-            </form>
-            
-            
-            
-            <h5>Texto para modificar</h5>
-            <script src="app.js"></script>
-            
-        </body>
-        
-        </html>
+      <div class="card border-dark mb-3" style="max-width: 20rem">
+        <div class="card-header">Producto A</div>
+        <div class="card-body">
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsam
+            rerum eveniet adipisci atque explicabo obcaecati nulla incidunt enim
+            veniam..
+          </p>
+          <button type="button" class="btn btn-dark" id="btnInfo">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+      <div class="card border-dark mb-3" style="max-width: 20rem">
+        <div class="card-header">Producto B</div>
+        <div class="card-body">
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsam
+            rerum eveniet adipisci atque explicabo obcaecati nulla incidunt enim
+            veniam..
+          </p>
+          <button type="button" class="btn btn-dark">Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="card border-dark mb-3" style="max-width: 20rem">
+        <div class="card-header">Producto C</div>
+        <div class="card-body">
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsam
+            rerum eveniet adipisci atque explicabo obcaecati nulla incidunt enim
+            veniam..
+          </p>
+          <button type="button" class="btn btn-dark">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Cart -->
+
+    <div class="container">
+      <h2>Tu Carrito</h2>
+      <em>Tus productos seleccionados...</em>.
+
+      <div class="container-cart">
+        <h4 class="card-title">Producto C</h4>
+        <p class="card-text">Precio:</p>
+        <button type="button" class="btn btn-outline-primary" id="btn-eliminar">
+          Eliminar
+        </button>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Form -->
+
+    <form class="container" id="formulario">
+      <h3>Formulario de Contacto</h3>
+      <label>Nombre y Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputName"
+        placeholder="Ingrese su Nombre y Apellido"
+      />
+      <label>Correo Electrónico</label>
+      <input
+        type="email"
+        class="form-control"
+        id="inputEmail"
+        placeholder="Ingrese su E-mail"
+      />
+      <div class="container-form">
+        <button type="submit" class="btn btn-secondary">
+          Comprar y Enviar Información
+        </button>
+      </div>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
